@@ -1,0 +1,235 @@
+@import "reset.styl"
+
+.avatar-container
+  margin auto
+  height 800px
+  width 800px
+  display block
+  background-color cornflowerblue
+  border-radius 50%
+  overflow hidden
+
+.body
+  left 41%
+  top 35%
+  width 150px
+  height 260px
+  margin 0
+  position absolute
+  transform scale(3)
+
+.head
+  height 125px
+  width 150px
+  top 25px
+  z-index 2
+
+.face
+  position absolute
+  height 125px
+  width 120px
+  background linear-gradient(to right, #e1c6a7 0%, #ffe4c4 20%, #ffe4c4 80%, #e1c6a7 100%)
+  border-radius 30% 30% 50% 50%
+  transform translate(-50%, -50%)
+  left 50%
+  top 50%
+  margin 0
+  overflow hidden
+  z-index 1
+
+.eye
+  border-radius 30% 30% 50% 50%
+  width 20px
+  height 20px
+  background-color white
+  position absolute
+  top 30%
+  background: radial-gradient(ellipse at center, #000000 0%,#000000 14%, #6c381f 22%, #804525 38%,#ffffff 40%,#ffffff 100%);
+  &.left
+    left 20%
+  &.right
+    right 20%
+    left auto
+    transform rotateY(180deg)
+  .eyebrow
+    width 25px
+    height 5px
+    border solid 3px
+    border-color #000 transparent transparent transparent
+    border-radius  50%/5px 5px 0 0
+    position absolute
+    top -7px
+    left -5px
+    transform rotateZ(15deg)
+
+.wrinkles
+  position absolute
+  top 20%
+  left 50%
+  transform translate(-50%)
+  &:before
+  &:after
+    content ''
+    width 20px
+    height 30px
+    border solid 1px
+    border-color transparent transparent transparent #ffcaa1
+    border-radius 0 0 50% 50%
+
+.nose
+  position absolute
+  top 40%
+  left 50%
+  width 40px
+  height 40px
+  transform translate(-50%)
+  &:before
+  &:after
+    content ''
+    position absolute
+    width 20px
+    height 30px
+    border solid 1px
+    border-color transparent transparent transparent #ffcaa1
+    border-radius 0 0 50% 50%
+  &:after
+    left 10px
+  &:before
+    right 10px
+    transform rotateY(180 deg)
+  .nose-bottom
+    position absolute
+    width 25px
+    height 15px
+    border solid 1px
+    border-color transparent #ffcaa1 #ffcaa1 #ffcaa1
+    border-radius 50%
+    top 40%
+    left 50%
+    transform translate(-50%)
+
+.mounth
+  position absolute
+  width 30px
+  height 10px
+  border solid 1px
+  border-color #000 transparent transparent transparent
+  border-radius 50% 50% 0 0
+  bottom 14%
+  left 36%
+  transform rotateZ(180deg) rotateY(180deg)
+
+.face-hair
+  bottom -7px
+  height 94%
+  border-radius 50%
+  border 20px solid #3f1f17
+  position absolute
+  width 100%
+  left 50%
+  transform translate(-50%)
+  &:after
+    content ''
+    bottom -20px
+    height 20%
+    border-radius 50%
+    border 10px solid #3f1f17
+    position absolute
+    width 30%
+    left 50%
+    transform translate(-50%)
+
+.hair
+  height 30px
+  width 80px
+  position absolute
+  background-color #3f1f17
+  top -18px
+  left 35px
+  z-index 1
+  border-radius 35px 35px 0 0
+  &:before
+  &:after
+    content ''
+    position absolute
+    background-color #3f1f17
+    height 20px
+    width 10px
+    left -5px
+    border-top-left-radius 100%
+    z-index -1
+    top 10px
+  &:after
+    transform rotateY(180deg)
+    left 75px
+
+.ear
+  height 30px
+  width 20px
+  background-color #e9ceaf
+  border-radius 50%
+  position absolute
+  top 34%
+  left 4px
+  &.right
+    transform rotateY(180deg)
+    left 126px
+
+
+.tshirt
+  height 120px
+  width 150px
+  background-color #474747
+  top 15px
+  border-radius 40% 40% 0 0
+  &:after
+  &:before
+    content ''
+    height 60%
+    width 1px
+    background-color #333333
+    position absolute
+    bottom 0
+    left 20px
+  &:after
+    left auto
+    right 20px
+
+  .collar
+    position absolute
+    height 30px
+    width 60px
+    background linear-gradient(to right, #e1c6a7 0%, #ffe4c4 20%, #ffe4c4 80%, #e1c6a7 100%)
+    border-width 10px
+    border-style solid
+    border-color #5f5f5f
+    border-radius 50%
+    left 50%
+    top -10px
+    z-index 1
+    transform translate(-50%)
+
+  .print
+    width 50px
+    height 50px
+    bottom 10%
+    background-color #f7df1e
+    left 50%
+    transform translate(-50%)
+    position absolute
+    p
+      font-size 25px
+      font-family sans-serif
+      font-weight bold
+      position absolute
+      bottom 0
+      right 2px
+
+.arm
+  height 30px
+  width 20px
+  position absolute
+  background #ffe4c4
+  bottom 0
+  &.right
+    right 0
